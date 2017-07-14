@@ -55,7 +55,7 @@ var app = {
 
         push.on('registration', function(data) {
             console.log('registration event: ' + data.registrationId);
-			document.getElementById("gcm_id").innerHTML = data.registrationId;
+			document.getElementById("gcm_id").value = data.registrationId;
 
             var oldRegId = localStorage.getItem('registrationId');
             if (oldRegId !== data.registrationId) {
